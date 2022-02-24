@@ -1,0 +1,9 @@
+begin create template for chess game (chess.com)
+on first step want to create mobile version 
+
+24.02.22 
+-create var for colors 
+-start nav menu with burger
+
+-+ finish nav menu
+

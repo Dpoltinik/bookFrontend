@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/cheescss.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header">
+
+            <nav class="menu">
+                <button class="menu-toggle" id="toggle-menu">
+                    Развернуть меню
+                </button>
+                <div class="menu-dropdown">
+                    <ul type='none'>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/main.png'><div>Главная</div></a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/plaing.png'>Играть</a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/pazzle.png'>Задачи</a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/learn.png'>Учеба</a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/newspaper.png'>Сегодня</a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/message.png'>Общение</a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/3point.png'>Ещё</a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/diamond.png'><div>Бесплатная подписка</div></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <img src="img/lable.png">
+
+            <div class="side-menu">
+                <ul>
+                    <li><a href="/arm"><img src="img/cheesarm.png"></a></li>
+                    <li><a href="/message"><img src="img/message.png"></a></li>
+                    <li><a href="/notice"><img src="img/notice.png"></a></li>
+                    <li><a href="/setting"><img src="img/setting.png"></a></li>
+                </ul>
+            </div>
+
+        </header>
+
+
+
+        <script type="text/javascript">
+            (function() {
+                var button = document.getElementById('toggle-menu');
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var menu = document.getElementById('main-menu');
+                    menu.classList.toggle('is-open');
+                });
+            })();
+        </script>
+    </body>
+</html>
