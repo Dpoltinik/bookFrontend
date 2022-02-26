@@ -2,11 +2,14 @@ html {
 
     --back-brawn: rgb(49,46,43);
     --side-brawn: rgb(39,37,34);
-    --side-brawn_dark: rgb(34,42,29);
+    --side-brawn_dark: rgb(34,32,29);
     --active-brawn: rgb(28,26,24);
     --text-color: rgb(165,164,163);
     --button-white-green: rgb(127,166,80);
     --button-dark-green: rgb(83,113,51);
+    --timer-white: rgb(152,150,149);
+    --timer-black: rgb(43,39,35);
+    --timer-text: rgb(98,95,92);
 
     box-sizing: border-box;
     color: var(--text-color);
@@ -39,6 +42,9 @@ header > img {
 
 .menu {
     position: relative;
+    /* display: flex;
+    flex-direction: column;
+    height: 100%; */
 }
 
 
@@ -70,18 +76,37 @@ header > img {
 
 
 .menu-dropdown {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 2.5em;
     left: 0.2em;
+    background-color: var(--side-brawn);
+    
+
 }
 
-.menu-dropdown > ul {
+.menu-dropdown  ul {
     margin: 0;
     padding: 0;
 }
 
+.menu.is-open .menu-dropdown {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
+/* ________search________ */
+
+.search {
+    display: block;
+    margin: .8em 0.8em .8em 1em;
+    border: 0.1em solid rgb(49,46,43);
+    border-radius: .3em;
+    height: 2em;
+    line-height: 1;
+    background-color: rgb(61,59,57);
+}
 
 .media-link {
     display: flex;
@@ -95,6 +120,37 @@ header > img {
 .media-link > img {
     margin-right: 0.4em;
 }
+
+/* ___bottom-links____ */
+
+.bottom-links {
+    margin-top: auto;
+    margin-bottom: 4em;
+}
+
+.media-link--small {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.media-link--gamer {
+    background-color: var(--back-brawn);
+    align-items: flex-start;
+    padding-left: 0;
+}
+
+.media-link--sidebar {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    padding: 0.5em 0;
+    text-align: center;
+    font-size: 0.9em;
+    background-color: var(--active-brawn);
+
+}
+
+
 
 
 /* _____side-items_____ */
@@ -114,3 +170,55 @@ header > img {
     padding: 0 0.1em;
 }
 
+/* game */
+.game {
+    margin: 0.8em 2em;
+}
+
+.gamer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer {
+    align-self: center;
+    font-size: 1.7em;
+    background-color: var(--timer-black);
+    padding: 0.3em 0.3em 0.3em 2em;
+    border-radius: 0.2em;
+}
+
+.timer--gamer {
+    background-color: var(--timer-white);
+    color: var(--timer-text);
+}
+
+/* sidebar */
+
+.sidebar {
+    margin: 0.8em 2em;
+    background-color: var(--side-brawn_dark);
+}
+
+.sidebar-buttons {
+    display: flex;
+    border-radius: 1em;
+
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    padding: 1em; 
+    align-items: center;
+    
+}
+
+.time > img {
+    padding-right: 0.5em;
+}
+
+.play {
+    background-color: var(--button-dark-green);
+    border-bottom: 0.2em solid var(--button-white-green);
+}

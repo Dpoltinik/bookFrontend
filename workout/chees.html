@@ -5,28 +5,37 @@
         <meta name="viewport" content="width=device-width initial-scale=1.0">
     </head>
     <body>
-        <header class="header">
 
-            <nav class="menu">
+        <!-- HEADER -->
+        <header class="header">
+            <nav class="menu" id="menu">
                 <button class="menu-toggle" id="toggle-menu">
                     Развернуть меню
                 </button>
                 <div class="menu-dropdown">
                     <ul type='none'>
-                        <li><a class='media-link' href='#'><img src='img/dropdown/main.png'><div>Главная</div></a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/main.png'>Главная</a></li>
                         <li><a class='media-link' href='#'><img src='img/dropdown/plaing.png'>Играть</a></li>
                         <li><a class='media-link' href='#'><img src='img/dropdown/pazzle.png'>Задачи</a></li>
                         <li><a class='media-link' href='#'><img src='img/dropdown/learn.png'>Учеба</a></li>
                         <li><a class='media-link' href='#'><img src='img/dropdown/newspaper.png'>Сегодня</a></li>
                         <li><a class='media-link' href='#'><img src='img/dropdown/message.png'>Общение</a></li>
                         <li><a class='media-link' href='#'><img src='img/dropdown/3point.png'>Ещё</a></li>
-                        <li><a class='media-link' href='#'><img src='img/dropdown/diamond.png'><div>Бесплатная подписка</div></a></li>
+                        <li><a class='media-link' href='#'><img src='img/dropdown/diamond.png'>Бесплатная подписка</a></li>
                     </ul>
-                </div>
+                    <form>
+                        <input class="search" type="text" placeholder="Search">
+                    </form>
+                    <div class="bottom-links">
+                        <ul type="none">
+                            <li><a class='media-link media-link--small' href='#'><img src='img/dropdown/sun.png'>Светлый интерфейс</a></li>
+                            <li><a class='media-link media-link--small' href='#'><img src='img/dropdown/sett.png'>Настройки</a></li>
+                            <li><a class='media-link media-link--small' href='#'><img src='img/dropdown/question.png'>Помощь</a></li>
+                        </ul>
+                    </div>
+                    </div>
             </nav>
-
             <img src="img/lable.png">
-
             <div class="side-menu">
                 <ul>
                     <li><a href="/arm"><img src="img/cheesarm.png"></a></li>
@@ -35,8 +44,36 @@
                     <li><a href="/setting"><img src="img/setting.png"></a></li>
                 </ul>
             </div>
-
         </header>
+
+        <!-- GAME -->
+        <div class="game">
+
+            <div class="gamer">
+                <a class="media-link media-link--gamer"><img src="img/game/portret.png">Противник</a>
+                <div class="timer">30.00</div>
+            </div>
+
+            <div class="game-field"><img src="img/game/game-desk.png"></div>
+            
+            <div class="gamer">
+                <a class="media-link media-link--gamer"><img src="img/game/portret.png">Игрок</a>
+                <div class="timer timer--gamer">30.00</div>
+            </div>
+        </div>
+
+<!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="sidebar-buttons">
+                <a class="media-link media-link--sidebar"><img src="img/sidebar/add.png">Новая партия</a>
+                <a class="media-link media-link--sidebar"><img src="img/sidebar/minidesk.png">Партии</a>
+                <a class="media-link media-link--sidebar"><img src="img/sidebar/friends.png">Игроки</a>
+            </div>
+            <div>
+                <div class="time"><img src='img/sidebar/timer.png'> 30 мин.</div>
+                <div class="play">Играть</div>
+            </div>
+        </div>
 
 
 
@@ -45,7 +82,7 @@
                 var button = document.getElementById('toggle-menu');
                 button.addEventListener('click', function(event) {
                     event.preventDefault();
-                    var menu = document.getElementById('main-menu');
+                    var menu = document.getElementById('menu');
                     menu.classList.toggle('is-open');
                 });
             })();
