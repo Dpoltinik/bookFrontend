@@ -198,6 +198,7 @@ header > img {
 .sidebar {
     margin: 0.8em 2em;
     background-color: var(--side-brawn_dark);
+
 }
 
 .sidebar-buttons {
@@ -206,11 +207,19 @@ header > img {
 
 }
 
+.play-time {
+    margin: 1em;
+}
+
+
 .time {
     display: flex;
     justify-content: center;
     padding: 1em; 
     align-items: center;
+    background-color: var(--back-brawn);
+    margin: 1em;
+    border-radius: 0.5em;
     
 }
 
@@ -219,6 +228,56 @@ header > img {
 }
 
 .play {
-    background-color: var(--button-dark-green);
-    border-bottom: 0.2em solid var(--button-white-green);
+    background-color: var(--button-white-green);
+    border-bottom: 0.2em solid var(--button-dark-green);
+    border-radius: 0.5em;
+    margin: .75em;
+    padding: 1em;
+    text-align: center;
+    line-height: 0.5em;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 15px;
+
+}
+
+.sidebar-media {
+    background-color: var(--side-brawn);
+    padding: 1em;
+}
+
+.media-div {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: var(--side-brawn_dark);
+    border-radius: 0.5em;
+}
+
+.media-div + .media-div {
+    margin-top: 0.3em;
+}
+
+.tournament {
+    display: flex;
+    background-color: var(--side-brawn);
+    padding: 1em 1em 0 1em;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.tournament img {
+    object-fit:contain;
+    margin: 0.3em;
+}
+
+.number {
+    margin-left: auto;
+}
+
+.footer {
+    background-color: var(--side-brawn);
+    padding: 1em;
 }
