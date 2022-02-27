@@ -7,9 +7,11 @@ html {
     --text-color: rgb(165,164,163);
     --button-white-green: rgb(127,166,80);
     --button-dark-green: rgb(83,113,51);
+    --button-hover-green: rgb(149,187,74);
     --timer-white: rgb(152,150,149);
     --timer-black: rgb(43,39,35);
     --timer-text: rgb(98,95,92);
+    
 
     box-sizing: border-box;
     color: var(--text-color);
@@ -36,6 +38,12 @@ header {
 
 header > img {
     margin-left: 3em;
+}
+
+@media (min-width:900px) {
+    header > img {
+        position: fixed;
+    }
 }
 
 /* _____menu_____ */
@@ -96,7 +104,37 @@ header > img {
     height: 100vh;
 }
 
+@media (min-width:900px) {
+
+   
+    .menu-toggle {
+        display: none;
+    }
+    .menu-dropdown {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+    }
+
+    
+}
+
+.game-field {
+    display:flex;
+    justify-content: center;
+}
+
+.game-field img {
+    max-width: 100%;
+}
 /* ________search________ */
+
+@media (min-width:900px) {
+    .game-field img {
+        max-width: 100%;
+    }
+}
 
 .search {
     display: block;
@@ -120,6 +158,10 @@ header > img {
 .media-link > img {
     margin-right: 0.4em;
 }
+
+
+
+
 
 /* ___bottom-links____ */
 
@@ -152,6 +194,22 @@ header > img {
 
 
 
+@media (min-width: 900px) {
+    .media-link:hover {
+        background-color: var(--active-brawn);
+        color: white;
+    }
+
+    .media-link--gamer:hover {
+        background-color: var(--back-brawn);
+        
+    }
+    .media-link--sidebar:hover {
+        background-color: var(--side-brawn_dark);
+    }
+}
+
+
 
 /* _____side-items_____ */
 
@@ -170,7 +228,19 @@ header > img {
     padding: 0 0.1em;
 }
 
+@media (min-width: 900px) {
+    
+    
+    .side-menu ul {
+        display:block;
+        position: absolute;
+        top: 8em;
+        right: 15em;
+    }
+}
+
 /* game */
+
 .game {
     margin: 0.8em 2em;
 }
@@ -193,6 +263,13 @@ header > img {
     color: var(--timer-text);
 }
 
+@media (min-width:900px) {
+  
+    .container {
+        width: calc(100% - 500px);
+        margin: 0 auto;
+}
+}
 /* sidebar */
 
 .sidebar {
@@ -242,6 +319,11 @@ header > img {
 
 }
 
+.play:hover {
+    background-color: var(--button-hover-green);
+    box-shadow: 0 0 5px 2px var(--button-hover-green);
+}
+
 .sidebar-media {
     background-color: var(--side-brawn);
     padding: 1em;
@@ -250,9 +332,15 @@ header > img {
 .media-div {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1em;
     background-color: var(--side-brawn_dark);
     border-radius: 0.5em;
+}
+
+.media-div:hover {
+    background-color: var(--active-brawn);
+    color: white;
 }
 
 .media-div + .media-div {
@@ -266,6 +354,12 @@ header > img {
     align-items: center;
     font-size: 0.9em;
     font-weight: bold;
+}
+
+.tournament:hover {
+    background-color: var(--active-brawn);
+    color: white;
+
 }
 
 .tournament img {

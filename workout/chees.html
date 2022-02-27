@@ -2,7 +2,7 @@
 <html>
     <head>
         <link href="css/cheescss.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
 
@@ -47,20 +47,24 @@
         </header>
 
         <!-- GAME -->
+        <div class="container">
+
         <div class="game">
 
-            <div class="gamer">
-                <a class="media-link media-link--gamer"><img src="img/game/portret.png">Противник</a>
-                <div class="timer">30.00</div>
-            </div>
+                <div class="gamer gamer-1">
+                    <a class="media-link media-link--gamer"><img src="img/game/portret.png">Противник</a>
+                    <div class="timer">30.00</div>
+                </div>
 
-            <div class="game-field"><img src="img/game/game-desk.png"></div>
+                <div class="game-field"><img src="img/game/game-desk.png" srcset="img/game/game-desk.png 360w, img/game/game-desk-medium.png 500w" alt=""/></div>
+                
+                <div class="gamer gamer-2">
+                    <a class="media-link media-link--gamer"><img src="img/game/portret.png">Игрок</a>
+                    <div class="timer timer--gamer">30.00</div>
+                </div>
             
-            <div class="gamer">
-                <a class="media-link media-link--gamer"><img src="img/game/portret.png">Игрок</a>
-                <div class="timer timer--gamer">30.00</div>
-            </div>
         </div>
+
 
 <!-- SIDEBAR -->
         <div class="sidebar">
@@ -106,6 +110,8 @@
                 <span><img src="img/sidebar/minimessage.png"><b> 130331</b> играют <b>9123834</b> партий</span>
             </div>
         </div>
+    </div>
+
 
 
         <script type="text/javascript">
